@@ -3,7 +3,9 @@
 Work in Progress PCB-design for a motorized macro rail.
 
 ## Preview
+### Perspective
+![TopView](./Outputs/Images/MacroRail-3D-Perspective.png) 
 ### Top
-![TopView](./PDFs/MacroRail-top.png) 
+![TopView](./Outputs/Images/MacroRail-3D-Top.png) 
 ### Bottom
-![BottomView](./PDFs/MacroRail-bottom.png)
+![BottomView](./Outputs/Images/MacroRail-3D-Bottom.png)

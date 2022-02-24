@@ -14355,16 +14355,16 @@ Big oval pads</description>
 </class>
 </classes>
 <parts>
-<part name="U1" library="ESP32-DEVKITC" deviceset="ESP32DEVKITC" device=""/>
-<part name="U2" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" deviceset="TCM2209-V1.2" device="" package3d_urn="urn:adsk.eagle:package:34261111/3"/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="E5-8.5" package3d_urn="urn:adsk.eagle:package:23374/1"/>
+<part name="U1" library="ESP32-DEVKITC" deviceset="ESP32DEVKITC" device="" override_package3d_urn="urn:adsk.eagle:package:34287540/2" override_package_urn="urn:adsk.eagle:footprint:34287541/1"/>
+<part name="U2" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" deviceset="TCM2209-V1.2" device="" package3d_urn="urn:adsk.eagle:package:34261111/3" override_package3d_urn="urn:adsk.eagle:package:34287606/2" override_package_urn="urn:adsk.eagle:footprint:34261109/3"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="E5-8.5" package3d_urn="urn:adsk.eagle:package:23374/1" override_package3d_urn="urn:adsk.eagle:package:34287653/3" override_package_urn="urn:adsk.eagle:footprint:22875/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="1k"/>
-<part name="T1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="2N2222" device="" package3d_urn="urn:adsk.eagle:package:6240647/1"/>
-<part name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X4" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240819/1"/>
-<part name="JP1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1"/>
-<part name="CN2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="DCBARREL" device="PTH" package3d_urn="urn:adsk.eagle:package:6240729/1"/>
-<part name="JP3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1"/>
-<part name="JP4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1"/>
+<part name="T1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="2N2222" device="" package3d_urn="urn:adsk.eagle:package:6240647/1" override_package3d_urn="urn:adsk.eagle:package:34287641/2" override_package_urn="urn:adsk.eagle:footprint:6240001/1"/>
+<part name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="1X4" device="-3.5MM" package3d_urn="urn:adsk.eagle:package:6240819/1" override_package3d_urn="urn:adsk.eagle:package:34287611/2" override_package_urn="urn:adsk.eagle:footprint:6240174/1"/>
+<part name="JP1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287831/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1"/>
+<part name="CN2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="DCBARREL" device="PTH" package3d_urn="urn:adsk.eagle:package:6240729/1" override_package3d_urn="urn:adsk.eagle:package:34287631/2" override_package_urn="urn:adsk.eagle:footprint:6240083/1"/>
+<part name="JP3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287821/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1"/>
+<part name="JP4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="PINHD-1X3" device="CB" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287825/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1"/>
 <part name="JP2" library="pinhead-custom" library_urn="urn:adsk.eagle:library:7941324" deviceset="PINHD-1X4" device="" package3d_urn="urn:adsk.eagle:package:34277122/1"/>
 </parts>
 <sheets>
@@ -14779,6 +14779,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
 Since Version 8.4, EAGLE supports properties for SPICE simulation. 

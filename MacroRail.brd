@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -34,8 +34,8 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -157,6 +157,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="no" active="yes"/>
 </layers>
 <board>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYjkwZjE2" projecturn="a.cGVyc29uYWw6dWUyYjkwZjE2IzIwMTgwOTA0MTQ2OTc5MDgx" f3durn="urn:adsk.wipprod:dm.lineage:p6BxFAy9R-OurxXYLrTLuw" pcbguid="dc448735-d099-4600-9fa7-d1462ebbee2b" lastpulledtime="" lastsyncedchangeguid="3a389d4e-bac2-a2c9-eea1-15a63986cb67"/>
 <plain>
 <wire x1="0" y1="0" x2="42.85" y2="0" width="0" layer="20"/>
 <wire x1="42.85" y1="0" x2="42.85" y2="81.5" width="0" layer="20"/>
@@ -201,6 +202,13 @@
 <text x="3.048" y="45.974" size="1.778" layer="26" rot="SMR270" align="bottom-right">Feb 2022</text>
 <dimension x1="42.85" y1="81.5" x2="0" y2="81.5" x3="21.425" y3="86.36" textsize="1.778" layer="48"/>
 <dimension x1="0" y1="81.5" x2="0" y2="0" x3="-3.81" y3="40.75" textsize="1.778" layer="48"/>
+<hole x="21.59" y="5.08" drill="3.2"/>
+<hole x="39.37" y="77.47" drill="3.2"/>
+<hole x="3.81" y="77.47" drill="3.2"/>
+<dimension x1="2.7" y1="76.3" x2="4.7" y2="78.8" x3="2.285365625" y3="78.68170625" textsize="1.778" layer="48" dtype="diameter"/>
+<text x="8.89" y="12.7" size="0.889" layer="26" rot="MR0">Vin (5-12V)</text>
+<text x="12.7" y="6.35" size="0.889" layer="26" rot="MR90">GND</text>
+<text x="15.24" y="77.47" size="0.889" layer="25">JLCJLCJLCJLC</text>
 </plain>
 <libraries>
 <library name="ESP32-DEVKITC">
@@ -18004,18 +18012,18 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U1" library="ESP32-DEVKITC" package="ESP32-DEVKITC" value="ESP32DEVKITC" x="19.05" y="56.19" smashed="yes" rot="R90">
+<element name="U1" library="ESP32-DEVKITC" package="ESP32-DEVKITC" override_package3d_urn="urn:adsk.eagle:package:34287540/2" override_package_urn="urn:adsk.eagle:footprint:34287541/1" value="ESP32DEVKITC" x="19.05" y="56.19" smashed="yes" rot="R90">
 <attribute name="NAME" x="5.08" y="32.06" size="1.27" layer="21" rot="R90"/>
 </element>
-<element name="U2" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" package="BIGTREETECH-TCM2209-V1.2" package3d_urn="urn:adsk.eagle:package:34261111/3" value="TCM2209-V1.2" x="30.48" y="25.71" smashed="yes" rot="R270">
+<element name="U2" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" package="BIGTREETECH-TCM2209-V1.2" package3d_urn="urn:adsk.eagle:package:34261111/3" override_package3d_urn="urn:adsk.eagle:package:34287606/2" override_package_urn="urn:adsk.eagle:footprint:34261109/3" value="TCM2209-V1.2" x="30.48" y="25.71" smashed="yes" rot="R270">
 <attribute name="NAME" x="32.004" y="25.71" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="15.24" y="18.09" size="1.27" layer="27"/>
 </element>
-<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="E5-8,5" package3d_urn="urn:adsk.eagle:package:23374/1" value="" x="30.48" y="6.66" smashed="yes" rot="R270">
-<attribute name="NAME" x="32.766" y="2.5198" size="1.27" layer="25" ratio="10" rot="R270"/>
-<attribute name="POPULARITY" value="4" x="30.48" y="6.66" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="SPICEPREFIX" value="C" x="30.48" y="6.66" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="VALUE" x="27.4574" y="9.1746" size="1.27" layer="27" ratio="10" rot="R270"/>
+<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="E5-8,5" package3d_urn="urn:adsk.eagle:package:23374/1" override_package3d_urn="urn:adsk.eagle:package:34287653/3" override_package_urn="urn:adsk.eagle:footprint:22875/1" value="" x="33.02" y="5.39" smashed="yes" rot="R270">
+<attribute name="NAME" x="35.306" y="1.2498" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="POPULARITY" value="4" x="33.02" y="5.39" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="SPICEPREFIX" value="C" x="33.02" y="5.39" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="VALUE" x="29.9974" y="7.9046" size="1.27" layer="27" ratio="10" rot="R270"/>
 </element>
 <element name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="1k" x="34.234" y="29.21" smashed="yes" rot="R180">
 <attribute name="NAME" x="34.234" y="31.623" size="1.27" layer="25" ratio="10" rot="R180" align="bottom-center"/>
@@ -18023,31 +18031,31 @@ design rules under a new name.</description>
 <attribute name="SPICEPREFIX" value="R" x="34.234" y="29.21" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="36.52" y="29.7688" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="T1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="TO92-EBC-OVAL" package3d_urn="urn:adsk.eagle:package:6240647/1" value="2N2222" x="38.1" y="23.17" smashed="yes" rot="R180">
+<element name="T1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="TO92-EBC-OVAL" package3d_urn="urn:adsk.eagle:package:6240647/1" override_package3d_urn="urn:adsk.eagle:package:34287641/2" override_package_urn="urn:adsk.eagle:footprint:6240001/1" value="2N2222" x="38.1" y="23.17" smashed="yes" rot="R180">
 <attribute name="NAME" x="40.64" y="21.392" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="VALUE" x="40.64" y="27.742" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X04-3.5MM" package3d_urn="urn:adsk.eagle:package:6240819/1" value="1X4-3.5MM" x="3.81" y="21.9" smashed="yes" rot="R270">
+<element name="CN1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X04-3.5MM" package3d_urn="urn:adsk.eagle:package:6240819/1" override_package3d_urn="urn:adsk.eagle:package:34287611/2" override_package_urn="urn:adsk.eagle:footprint:6240174/1" value="1X4-3.5MM" x="3.81" y="21.9" smashed="yes" rot="R270">
 <attribute name="NAME" x="1.81" y="29.75" size="1.27" layer="25" rot="R90"/>
 </element>
-<element name="JP1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" value="" x="40.64" y="15.55" smashed="yes" rot="R90">
-<attribute name="NAME" x="41.3512" y="9.1238" size="1.27" layer="25" ratio="10" rot="R90"/>
+<element name="JP1" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287831/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1" value="" x="40.64" y="15.55" smashed="yes" rot="R90">
+<attribute name="NAME" x="41.3512" y="11.6638" size="1.27" layer="25" ratio="10" rot="R270" align="top-left"/>
 <attribute name="VALUE" x="43.815" y="11.74" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="CN2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="DCJACK_2MM_PTH" package3d_urn="urn:adsk.eagle:package:6240729/1" value="" x="5.08" y="-3.5" smashed="yes">
+<element name="CN2" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="DCJACK_2MM_PTH" package3d_urn="urn:adsk.eagle:package:6240729/1" override_package3d_urn="urn:adsk.eagle:package:34287631/2" override_package_urn="urn:adsk.eagle:footprint:6240083/1" value="" x="5.08" y="-3.5" smashed="yes">
 <attribute name="NAME" x="11.43" y="0.31" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="11.43" y="-3.5" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="JP3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" value="" x="40.64" y="59.9619" smashed="yes" rot="R90">
-<attribute name="NAME" x="41.3512" y="63.6957" size="1.27" layer="25" ratio="10" rot="R90"/>
+<element name="JP3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287821/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1" value="" x="40.64" y="59.9619" smashed="yes" rot="R90">
+<attribute name="NAME" x="41.3512" y="56.0757" size="1.27" layer="25" ratio="10" rot="R270" align="top-left"/>
 <attribute name="VALUE" x="43.815" y="56.1519" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="JP4" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" value="" x="40.64" y="71.43" smashed="yes" rot="R90">
-<attribute name="NAME" x="41.3512" y="75.1638" size="1.27" layer="25" ratio="10" rot="R90"/>
+<element name="JP4" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287825/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1" value="" x="40.64" y="71.43" smashed="yes" rot="R90">
+<attribute name="NAME" x="41.3512" y="67.5438" size="1.27" layer="25" ratio="10" rot="R270" align="top-left"/>
 <attribute name="VALUE" x="43.815" y="67.62" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="JP2" library="pinhead-custom" library_urn="urn:adsk.eagle:library:7941324" package="1X04" package3d_urn="urn:adsk.eagle:package:34277122/1" value="" x="40.64" y="47.3" smashed="yes" rot="R90">
-<attribute name="NAME" x="41.3512" y="52.3038" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="41.3512" y="42.1438" size="1.27" layer="25" ratio="10" rot="R270" align="top-left"/>
 <attribute name="VALUE" x="43.815" y="42.22" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="U$2" library="Silkscreen-art" package="APPLIED-PROCRASTINATION-FULL" value="" x="19.05" y="73.66" smashed="yes" rot="MR270"/>
@@ -18254,7 +18262,7 @@ design rules under a new name.</description>
 </signal>
 </signals>
 <mfgpreviewcolors>
-<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8000000"/>
 <mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
 <mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
 <mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
@@ -18269,6 +18277,11 @@ of those online libraries will not be understood (or retained)
 with this version.
 </note>
 <note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports Fusion synchronisation.
+This feature will not be available in this version and saving
+the document will break the link to the Fusion PCB feature.
+</note>
+<note version="8.3" severity="warning">
 Since Version 8.3, EAGLE supports URNs for individual library
 assets (packages, symbols, and devices). The URNs of those assets
 will not be understood (or retained) with this version.
@@ -18277,6 +18290,11 @@ will not be understood (or retained) with this version.
 Since Version 8.3, EAGLE supports the association of 3D packages
 with devices in libraries, schematics, and board files. Those 3D
 packages will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
