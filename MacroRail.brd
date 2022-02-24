@@ -18019,7 +18019,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="32.004" y="25.71" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="15.24" y="18.09" size="1.27" layer="27"/>
 </element>
-<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="E5-8,5" package3d_urn="urn:adsk.eagle:package:23374/1" override_package3d_urn="urn:adsk.eagle:package:34287653/3" override_package_urn="urn:adsk.eagle:footprint:22875/1" value="" x="33.02" y="5.39" smashed="yes" rot="R270">
+<element name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" package="E5-8,5" package3d_urn="urn:adsk.eagle:package:23374/1" override_package3d_urn="urn:adsk.eagle:package:34287653/3" override_package_urn="urn:adsk.eagle:footprint:22875/1" value="470uF" x="33.02" y="5.39" smashed="yes" rot="R270">
 <attribute name="NAME" x="35.306" y="1.2498" size="1.27" layer="25" ratio="10" rot="R270"/>
 <attribute name="POPULARITY" value="4" x="33.02" y="5.39" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="SPICEPREFIX" value="C" x="33.02" y="5.39" size="1.778" layer="27" rot="R270" display="off"/>
