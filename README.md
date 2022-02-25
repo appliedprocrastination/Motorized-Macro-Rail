@@ -8,15 +8,16 @@ Work in Progress PCB-design for a motorized macro rail.
  - PCB itself. Ca $10 at JLCPCB
  - 1x [TCM2209-V1.2](https://s.click.aliexpress.com/e/_9uc1XB) Stepper motor driver ([Documentation](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/)). ca $8
  - 1x [NodeMCU 32s](https://www.aliexpress.com/item/1005001636295529.html) Dev kit ([Documentation](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)) ca $5
- - 1x [2N222 BJT Transistor](https://s.click.aliexpress.com/e/_AoO6Oh) ca $1
- - 1x [1 kOhm resistor](https://s.click.aliexpress.com/e/_AOqGqt) ca $1
+ - 1x [PC817 Optocoupler](https://s.click.aliexpress.com/e/_AAgoAp) ca $1
  - 1x [470 uF capacitor](https://s.click.aliexpress.com/e/_A2G7TB) ca $1
- - 1x [2.1 mm Barrel Jack](https://s.click.aliexpress.com/e/_Aq01NT) ca $1
+ - 1x [2.1 mm Barrel Jack (power)](https://s.click.aliexpress.com/e/_Aq01NT) ca $1
+ - 1x [Selection of resistors](https://s.click.aliexpress.com/e/_AOqGqt) (depending on your camera) ca $1
+ - 1x [SJ1-2503A 2.5 mm Stereo Jack (for shutter cable)](https://no.mouser.com/ProductDetail/CUI-Devices/SJ1-2503A?qs=WyjlAZoYn52728cbIH3aBA%3D%3D) ca $1 (optional)
  - 1x [4-pin screw terminal block](https://s.click.aliexpress.com/e/_97dipR) ca $2 (optional)
  - 3x [3-pin pin row](https://s.click.aliexpress.com/e/_ABvcat) ca $1 (optional)
  - 1x [4-pin pin row](https://s.click.aliexpress.com/e/_ABvcat) ca $1 (optional)
 
- Total on PCB: ca $31
+ Total on PCB: ca $32
 
 ### Outside of PCB:
  - [Macro Rail](https://s.click.aliexpress.com/e/_9IiOvB) ca. $20 
