@@ -17999,6 +17999,8 @@ depending on your camera</text>
 <wire x1="-20.32" y1="87.376" x2="-21.082" y2="87.376" width="0.1524" layer="97"/>
 <wire x1="-21.082" y1="87.376" x2="-20.32" y2="90.678" width="0.1524" layer="97"/>
 <wire x1="-20.32" y1="83.82" x2="-20.32" y2="87.376" width="0.1524" layer="97"/>
+<text x="30.48" y="88.9" size="1.778" layer="97">Only mount R2 and R3 
+if using a Lumix-camera</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="2.54" y="35.56" smashed="yes" rot="R270">
@@ -18009,9 +18011,9 @@ depending on your camera</text>
 <attribute name="NAME" x="24.765" y="150.876" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="29.591" y="150.876" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R1" gate="G$1" x="73.66" y="91.44" smashed="yes">
-<attribute name="NAME" x="69.85" y="92.9386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="69.85" y="88.138" size="1.778" layer="96"/>
+<instance part="R1" gate="G$1" x="93.98" y="91.44" smashed="yes">
+<attribute name="NAME" x="90.17" y="92.9386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="88.138" size="1.778" layer="96"/>
 </instance>
 <instance part="CN1" gate="G$1" x="50.8" y="134.62" smashed="yes">
 <attribute name="NAME" x="55.88" y="142.24" size="1.27" layer="95" font="vector" rot="R180"/>
@@ -18037,19 +18039,19 @@ depending on your camera</text>
 <attribute name="NAME" x="171.45" y="52.705" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="171.45" y="68.58" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="OK1" gate="A" x="53.34" y="93.98" smashed="yes" rot="R180">
-<attribute name="NAME" x="60.325" y="88.265" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="60.325" y="101.6" size="1.778" layer="96" rot="R180"/>
+<instance part="OK1" gate="A" x="73.66" y="93.98" smashed="yes" rot="R180">
+<attribute name="NAME" x="80.645" y="88.265" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="80.645" y="101.6" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="R3" gate="G$1" x="25.4" y="93.98" smashed="yes" rot="R90">
 <attribute name="NAME" x="23.9014" y="90.17" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="28.702" y="90.17" size="1.778" layer="96" rot="R90"/>
+<attribute name="VALUE" x="28.194" y="87.376" size="1.778" layer="96" rot="R90"/>
 <attribute name="DNP" x="23.876" y="94.488" size="1.778" layer="96" rot="R90" display="name"/>
 </instance>
-<instance part="R2" gate="G$1" x="35.56" y="109.22" smashed="yes">
-<attribute name="NAME" x="31.75" y="110.7186" size="1.778" layer="95"/>
-<attribute name="VALUE" x="31.75" y="105.918" size="1.778" layer="96"/>
-<attribute name="DNP" x="36.068" y="110.744" size="1.778" layer="96" display="name"/>
+<instance part="R2" gate="G$1" x="45.72" y="99.06" smashed="yes">
+<attribute name="NAME" x="41.91" y="100.5586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="47.244" y="95.758" size="1.778" layer="96"/>
+<attribute name="DNP" x="46.228" y="100.584" size="1.778" layer="96" display="name"/>
 </instance>
 <instance part="SJ2" gate="1" x="5.08" y="86.36" smashed="yes" rot="R270">
 <attribute name="NAME" x="6.604" y="88.138" size="1.778" layer="95" rot="R270"/>
@@ -18059,9 +18061,9 @@ depending on your camera</text>
 <attribute name="NAME" x="21.336" y="84.328" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="21.59" y="83.82" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="SJ1" gate="1" x="35.56" y="101.6" smashed="yes" rot="R180">
-<attribute name="NAME" x="38.1" y="99.06" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="38.1" y="105.41" size="1.778" layer="96" rot="R180"/>
+<instance part="SJ1" gate="1" x="45.72" y="106.68" smashed="yes" rot="R180">
+<attribute name="NAME" x="48.006" y="104.902" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="48.26" y="110.49" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="J1" gate="G$1" x="-35.56" y="99.06" smashed="yes">
 <attribute name="NAME" x="-50.8" y="99.568" size="1.778" layer="95" font="vector"/>
@@ -18077,43 +18079,47 @@ depending on your camera</text>
 <nets>
 <net name="CAM_GND" class="0">
 <segment>
-<wire x1="30.48" y1="109.22" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="109.22" x2="12.7" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="A" pin="3"/>
 <wire x1="12.7" y1="109.22" x2="12.7" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="96.52" x2="-12.7" y2="96.52" width="0.1524" layer="91"/>
-<label x="12.7" y="109.22" size="1.778" layer="95"/>
+<label x="33.02" y="109.22" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="25.4" y1="99.06" x2="25.4" y2="109.22" width="0.1524" layer="91"/>
 <junction x="25.4" y="109.22"/>
 <pinref part="SJ1" gate="1" pin="2"/>
-<wire x1="30.48" y1="101.6" x2="30.48" y2="109.22" width="0.1524" layer="91"/>
-<junction x="30.48" y="109.22"/>
 <pinref part="OK1" gate="A" pin="EMIT"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="40.64" y1="109.22" x2="40.64" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="101.6" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="99.06" x2="40.64" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="96.52" x2="45.72" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="109.22" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="106.68" x2="60.96" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="99.06" x2="60.96" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="96.52" x2="66.04" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="SJ1" gate="1" pin="1"/>
-<junction x="40.64" y="101.6"/>
-<wire x1="30.48" y1="101.6" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
-<junction x="30.48" y="101.6"/>
-<wire x1="30.48" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
-<junction x="40.64" y="99.06"/>
+<junction x="60.96" y="106.68"/>
+<wire x1="30.48" y1="109.22" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
 <wire x1="-35.56" y1="99.06" x2="-27.94" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="99.06" x2="-27.94" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="109.22" x2="12.7" y2="109.22" width="0.1524" layer="91"/>
 <junction x="12.7" y="109.22"/>
+<wire x1="25.4" y1="109.22" x2="30.48" y2="109.22" width="0.1524" layer="91"/>
+<junction x="30.48" y="109.22"/>
+<wire x1="50.8" y1="99.06" x2="60.96" y2="99.06" width="0.1524" layer="91"/>
+<junction x="60.96" y="99.06"/>
+<wire x1="50.8" y1="106.68" x2="60.96" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="109.22" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="106.68" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="99.06" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="106.68" x2="30.48" y2="106.68" width="0.1524" layer="91"/>
+<junction x="30.48" y="106.68"/>
 </segment>
 </net>
 <net name="CAM_FOCUS_SHUTTER" class="0">
 <segment>
 <pinref part="JP1" gate="A" pin="1"/>
 <wire x1="2.54" y1="91.44" x2="-12.7" y2="91.44" width="0.1524" layer="91"/>
-<label x="12.7" y="78.74" size="1.778" layer="95"/>
+<label x="33.02" y="78.74" size="1.778" layer="95"/>
 <pinref part="SJ2" gate="1" pin="2"/>
 <pinref part="SJ2" gate="1" pin="1"/>
 <wire x1="5.08" y1="91.44" x2="2.54" y2="91.44" width="0.1524" layer="91"/>
@@ -18122,9 +18128,9 @@ depending on your camera</text>
 <wire x1="-12.7" y1="93.98" x2="15.24" y2="93.98" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="93.98" x2="15.24" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="OK1" gate="A" pin="COL"/>
-<wire x1="40.64" y1="91.44" x2="45.72" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="40.64" y1="78.74" x2="40.64" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="78.74" x2="40.64" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="91.44" x2="66.04" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="78.74" x2="60.96" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="78.74" x2="60.96" y2="78.74" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="88.9" x2="25.4" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="78.74" x2="17.78" y2="78.74" width="0.1524" layer="91"/>
@@ -18231,8 +18237,8 @@ depending on your camera</text>
 </segment>
 <segment>
 <pinref part="OK1" gate="A" pin="C"/>
-<wire x1="63.5" y1="96.52" x2="88.9" y2="96.52" width="0.1524" layer="91"/>
-<label x="88.9" y="96.52" size="1.778" layer="95" rot="MR0"/>
+<wire x1="83.82" y1="96.52" x2="109.22" y2="96.52" width="0.1524" layer="91"/>
+<label x="109.22" y="96.52" size="1.778" layer="95" rot="MR0"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -18388,8 +18394,8 @@ depending on your camera</text>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="78.74" y1="91.44" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
-<label x="88.9" y="91.44" size="1.778" layer="95" rot="MR0"/>
+<wire x1="99.06" y1="91.44" x2="109.22" y2="91.44" width="0.1524" layer="91"/>
+<label x="109.22" y="91.44" size="1.778" layer="95" rot="MR0"/>
 </segment>
 </net>
 <net name="LIMIT1" class="0">
@@ -18444,7 +18450,7 @@ depending on your camera</text>
 <segment>
 <pinref part="OK1" gate="A" pin="A"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="63.5" y1="91.44" x2="68.58" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="91.44" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
