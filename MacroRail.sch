@@ -17945,6 +17945,7 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="SJ1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1"/>
 <part name="J1" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" deviceset="SJ1-2503A" device="" package3d_urn="urn:adsk.eagle:package:34317647/3" override_package3d_urn="urn:adsk.eagle:package:34319661/2" override_package_urn="urn:adsk.eagle:footprint:34317645/1" override_locally_modified="yes"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-024X044" package3d_urn="urn:adsk.eagle:package:23643/1" override_package3d_urn="urn:adsk.eagle:package:34322317/2" override_package_urn="urn:adsk.eagle:footprint:23147/1" value="1uF"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="1k"/>
 </parts>
 <sheets>
 <sheet>
@@ -18072,6 +18073,10 @@ if using a Lumix-camera</text>
 <instance part="C2" gate="G$1" x="-20.32" y="7.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="-21.844" y="7.239" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-17.399" y="8.636" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="R4" gate="G$1" x="-55.88" y="134.62" smashed="yes" rot="R180">
+<attribute name="NAME" x="-52.07" y="133.1214" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-52.07" y="137.922" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -18245,6 +18250,11 @@ if using a Lumix-camera</text>
 <wire x1="-20.32" y1="5.08" x2="-20.32" y2="0" width="0.1524" layer="91"/>
 <label x="-20.32" y="0" size="1.778" layer="95" rot="R90"/>
 </segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="CLK"/>
+<wire x1="-15.24" y1="129.54" x2="-33.02" y2="129.54" width="0.1524" layer="91"/>
+<label x="-33.02" y="129.54" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="A2" class="1">
 <segment>
@@ -18341,25 +18351,11 @@ if using a Lumix-camera</text>
 <label x="-33.02" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="STEP_PDN_1" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="PDN_1"/>
-<wire x1="-15.24" y1="134.62" x2="-33.02" y2="134.62" width="0.1524" layer="91"/>
-<label x="-33.02" y="134.62" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="STEP_PDN_2" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="PDN_2"/>
 <wire x1="-15.24" y1="132.08" x2="-33.02" y2="132.08" width="0.1524" layer="91"/>
 <label x="-33.02" y="132.08" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="STEP_UART_CLK" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="CLK"/>
-<wire x1="-15.24" y1="129.54" x2="-33.02" y2="129.54" width="0.1524" layer="91"/>
-<label x="-33.02" y="129.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="STEP" class="0">
@@ -18453,6 +18449,52 @@ if using a Lumix-camera</text>
 <wire x1="83.82" y1="91.44" x2="88.9" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="U1TXD" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="-60.96" y1="134.62" x2="-71.12" y2="134.62" width="0.1524" layer="91"/>
+<label x="-71.12" y="134.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SD3"/>
+<wire x1="-33.02" y1="17.78" x2="-15.24" y2="17.78" width="0.1524" layer="91"/>
+<label x="-33.02" y="17.78" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="U1RXD" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="-50.8" y1="134.62" x2="-50.8" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="139.7" x2="-71.12" y2="139.7" width="0.1524" layer="91"/>
+<junction x="-50.8" y="134.62"/>
+<label x="-71.12" y="139.7" size="1.778" layer="95"/>
+<wire x1="-50.8" y1="134.62" x2="-15.24" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="PDN_1"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="SD2"/>
+<wire x1="-15.24" y1="20.32" x2="-33.02" y2="20.32" width="0.1524" layer="91"/>
+<label x="-33.02" y="20.32" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="STEP_DIAG" class="0">
+<segment>
+<pinref part="U2" gate="G$1" pin="NC_2"/>
+<wire x1="0" y1="149.86" x2="0" y2="167.64" width="0.1524" layer="91"/>
+<label x="0" y="167.64" size="1.778" layer="95" rot="R90" align="bottom-right"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="IO32"/>
+<wire x1="-15.24" y1="43.18" x2="-33.02" y2="43.18" width="0.1524" layer="91"/>
+<label x="-33.02" y="43.18" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="IO33"/>
+<wire x1="-15.24" y1="40.64" x2="-33.02" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -18503,6 +18545,11 @@ Since Version 8.4, EAGLE supports properties for SPICE simulation.
 Probes in schematics and SPICE mapping objects found in parts and library devices
 will not be understood with this version. Update EAGLE to the latest version
 for full support of SPICE simulation. 
+</note>
+<note version="9.0" severity="warning">
+Since Version 9.0, EAGLE supports the align property for labels. 
+Labels in schematic will not be understood with this version. Update EAGLE to the latest version 
+for full support of labels. 
 </note>
 </compatibility>
 </eagle>
