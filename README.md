@@ -3,7 +3,7 @@
 ## Summary
 PCB-design for controlling a motorized macro rail. Features:
 - Flexible solution for connecting to most types of camera with remote triggering ability via 2.5mm stereo jack, pin header, or solder joints.
-- Simple design for driving a single motor via a TCM2209 V1.2 motor driver.
+- Simple design for driving a single motor via a TMC2209 V1.2 motor driver.
 - Based on the WiFi-enabled NodeMCU 32S V2 DevKit. 
 - Zero surface mount components, and should therefore be possible to hand solder - even for people with novice soldering skills. 
 - Has broken out headers for connecting limit switches and rotary encoders (neither of which are used in the intended application the board was designed for).
@@ -58,7 +58,7 @@ Cutting this wire will activate R2 and leave you with the following schematic:
 
 ### On PCB:
  - [PCB itself](./Outputs/Gerber/MacroRail_V1_0-2022-02-26.zip). Ca $10 at JLCPCB
- - 1x [TCM2209-V1.2](https://s.click.aliexpress.com/e/_9uc1XB) Stepper motor driver ([Documentation](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/)). ca $8
+ - 1x [TMC2209-V1.2](https://s.click.aliexpress.com/e/_9uc1XB) Stepper motor driver ([Documentation](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/)). ca $8
  - 1x [NodeMCU 32s V2](https://www.aliexpress.com/item/1005001636295529.html) Dev kit ([Documentation](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)) ca $5
  - 1x [PC817 Optocoupler](https://s.click.aliexpress.com/e/_AAgoAp) ca $1
  - 1x [100 uF capacitor (35V)](https://s.click.aliexpress.com/e/_ADnqKh) ca $1
@@ -78,7 +78,7 @@ Mandatory parts:
  - [Macro Rail](https://s.click.aliexpress.com/e/_9IiOvB) ca. $20 
  - [Nema 14 high torque motor](https://s.click.aliexpress.com/e/_ArX3ot) (High torque may be unnecessary for moving compact cameras) ca $20
  - RMS threaded microscope lens (focused to 160mm). [Example](https://s.click.aliexpress.com/e/_9zATGv) ca $8
- - 5-12V Power supply (current can be limited with TCM2209 if 5V is too much for your motor). [Example](https://s.click.aliexpress.com/e/_AC81D7) ca $8 
+ - 5-12V Power supply (current can be limited with TMC2209 if 5V is too much for your motor). [Example](https://s.click.aliexpress.com/e/_AC81D7) ca $8 
  - Cable for shutter release that fits your camera (you can either use the 2.5mm jack receptacle or cut the cable and solder it directly to the PCB via JP1)
     - [Example for various cameras](https://s.click.aliexpress.com/e/_9iNl7J) ca $3
 
@@ -105,4 +105,4 @@ Note: You may need to mount more resistors to get a minimum viable design (depen
 - [NodeMCU-32S Core Development Board](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)
 - [NodeMCU Arduino Core (Software)](https://github.com/espressif/arduino-esp32)
 - [TMC2209-V1.2 manual (Motor driver module)](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/blob/master/manual/TMC2209-V1.2-manual.pdf)
-- [TCM2209 datasheet (chip itself)](https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2209_datasheet_rev1.07.pdf)
+- [TMC2209 datasheet (chip itself)](https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2209_datasheet_rev1.07.pdf)
