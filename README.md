@@ -100,3 +100,9 @@ Total outside of PCB: ca $109 ($59 when excluding parts that can be 3D-printed)
 ### Minimum viable design
 Note: You may need to mount more resistors to get a minimum viable design (depending on your camera)
 ![MinimumViable](./Outputs/Images/Documentation/Minimalist-setup.png)
+
+### Various documentation:
+- [NodeMCU-32S Core Development Board](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)
+- [NodeMCU Arduino Core (Software)](https://github.com/espressif/arduino-esp32)
+- [TMC2209-V1.2 manual (Motor driver module)](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/blob/master/manual/TMC2209-V1.2-manual.pdf)
+- [TCM2209 datasheet (chip itself)](https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC2209_datasheet_rev1.07.pdf)
