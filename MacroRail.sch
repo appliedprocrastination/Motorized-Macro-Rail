@@ -414,6 +414,15 @@
 <text x="-2.54" y="2.794" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
 <text x="-2.54" y="-3.556" size="0.6096" layer="27" font="vector" ratio="20">&gt;VALUE</text>
 </package>
+<package name="TO220AH" urn="urn:adsk.eagle:footprint:34683656/2" library_version="4">
+<description>&lt;b&gt;Molded Package&lt;/b&gt;&lt;p&gt;
+grid 2.54 mm</description>
+<pad name="B" x="0" y="0" drill="1.1176" diameter="1.778" shape="square" rot="R90"/>
+<pad name="C" x="2.54" y="0" drill="1.1176" diameter="1.778" shape="octagon" rot="R90"/>
+<pad name="E" x="5.08" y="0" drill="1.1176" diameter="1.778" shape="octagon" rot="R90"/>
+<text x="-1.27" y="1.397" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-1.397" y="-3.81" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="BIGTREETECH-TCM2209-V1.2+INDEX" urn="urn:adsk.eagle:package:34428259/4" type="model" library_version="29">
@@ -425,6 +434,13 @@
 <description>Based on https://no.mouser.com/datasheet/2/670/sj1_2503a-1779217.pdf</description>
 <packageinstances>
 <packageinstance name="STEREOJACK2.5MM_STEREOJACK2.5MM"/>
+</packageinstances>
+</package3d>
+<package3d name="TO220AH" urn="urn:adsk.eagle:package:34683657/2" type="box" library_version="31">
+<description>&lt;b&gt;Molded Package&lt;/b&gt;&lt;p&gt;
+grid 2.54 mm</description>
+<packageinstances>
+<packageinstance name="TO220AH"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -479,6 +495,26 @@
 <wire x1="-14.732" y1="-5.842" x2="-13.208" y2="-5.842" width="0.254" layer="94"/>
 <wire x1="-13.208" y1="-5.842" x2="-13.208" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-13.208" y1="-2.54" x2="-13.97" y2="-2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="N-DAR" urn="urn:adsk.eagle:symbol:34683655/1" library_version="30">
+<wire x1="2.54" y1="2.54" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="2.032" y2="-2.032" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="-2.032" x2="2.286" y2="-2.286" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.016" x2="2.286" y2="-2.286" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="-2.286" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="-2.286" x2="1.016" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-1.778" x2="1.778" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="3.175" x2="0" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.778" x2="1.778" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.27" x2="2.032" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="2.032" y1="-2.032" x2="1.524" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.778" x2="1.778" y2="-1.524" width="0.254" layer="94"/>
+<text x="5.08" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.381" y1="-2.54" x2="0.381" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -541,6 +577,29 @@ AliExpress: https://s.click.aliexpress.com/e/_AMfutT&lt;br&gt;</description>
 </package3dinstances>
 <technologies>
 <technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TIP120" urn="urn:adsk.eagle:component:34683658/2" prefix="Q" library_version="31">
+<description>&lt;b&gt;NPN DARLINGTON TRANSISTOR&lt;/b&gt;</description>
+<gates>
+<gate name="1" symbol="N-DAR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO220AH">
+<connects>
+<connect gate="1" pin="B" pad="B"/>
+<connect gate="1" pin="C" pad="C"/>
+<connect gate="1" pin="E" pad="E"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:34683657/2"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="POPULARITY" value="2" constant="no"/>
+</technology>
 </technologies>
 </device>
 </devices>
@@ -17606,6 +17665,91 @@ Source: AVX .. aphvc.pdf</description>
 <rectangle x1="0.889" y1="-2.921" x2="1.651" y2="-1.905" layer="21"/>
 <rectangle x1="3.429" y1="-2.921" x2="4.191" y2="-1.905" layer="21"/>
 </package>
+<package name="1X02" urn="urn:adsk.eagle:footprint:34684080/1" locally_modified="yes" library_version="23" library_locally_modified="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-1.905" y1="1.27" x2="-0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="1.27" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="-0.635" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.635" y1="-1.27" x2="-1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="1.27" x2="1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="1.27" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="1.905" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="1.905" y1="-1.27" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="1.016" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.016" rot="R90"/>
+<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+</package>
+<package name="1X02/90" urn="urn:adsk.eagle:footprint:22310/1" library_version="22">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<wire x1="-2.54" y1="-1.905" x2="0" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="0" y1="-1.905" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="0.635" x2="-2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="-2.54" y1="0.635" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="6.985" x2="-1.27" y2="1.27" width="0.762" layer="21"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-1.905" x2="2.54" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="6.985" x2="1.27" y2="1.27" width="0.762" layer="21"/>
+<pad name="1" x="-1.27" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.27" y="-3.81" drill="1.016" shape="long" rot="R90"/>
+<text x="-3.175" y="-3.81" size="1.27" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<text x="4.445" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-1.651" y1="0.635" x2="-0.889" y2="1.143" layer="21"/>
+<rectangle x1="0.889" y1="0.635" x2="1.651" y2="1.143" layer="21"/>
+<rectangle x1="-1.651" y1="-2.921" x2="-0.889" y2="-1.905" layer="21"/>
+<rectangle x1="0.889" y1="-2.921" x2="1.651" y2="-1.905" layer="21"/>
+</package>
+<package name="SOLENOID-CONTACT" urn="urn:adsk.eagle:footprint:7941325/6" library_version="22">
+<pad name="1" x="-1.2666" y="-0.017" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.2734" y="-0.017" drill="1.016" shape="long" rot="R90"/>
+<rectangle x1="-1.5206" y1="-0.271" x2="-1.0126" y2="0.237" layer="51"/>
+<rectangle x1="1.0194" y1="-0.271" x2="1.5274" y2="0.237" layer="51"/>
+<wire x1="-5.006759375" y1="-3.022640625" x2="-5.006759375" y2="3.977359375" width="0.127" layer="21"/>
+<wire x1="-5.006759375" y1="3.977359375" x2="4.993240625" y2="3.977359375" width="0.127" layer="21"/>
+<wire x1="4.993240625" y1="3.977359375" x2="4.993240625" y2="-3.022640625" width="0.127" layer="21"/>
+<wire x1="4.993240625" y1="-3.022640625" x2="-5.006759375" y2="-3.022640625" width="0.127" layer="21"/>
+<text x="0.0254" y="2.032" size="1.27" layer="25" rot="SR0" align="bottom-center">&gt;NAME</text>
+<text x="0.0254" y="2.032" size="1.27" layer="26" rot="SMR0" align="bottom-center">&gt;NAME</text>
+<text x="-3.81" y="0.254" size="1.778" layer="25" align="center">–</text>
+<text x="-3.048" y="0.254" size="1.778" layer="26" align="center">–</text>
+<text x="3.81" y="0.0508" size="1.778" layer="25" align="center">+</text>
+<text x="2.921" y="0.0508" size="1.778" layer="26" align="center">+</text>
+</package>
+<package name="SOLENOID-CONTACT-REVERSE" urn="urn:adsk.eagle:footprint:7941326/8" library_version="22">
+<pad name="1" x="-1.2673" y="-0.013" drill="1.016" shape="long" rot="R90"/>
+<pad name="2" x="1.2727" y="-0.013" drill="1.016" shape="long" rot="R90"/>
+<rectangle x1="-1.5213" y1="-0.267" x2="-1.0133" y2="0.241" layer="51"/>
+<rectangle x1="1.0187" y1="-0.267" x2="1.5267" y2="0.241" layer="51"/>
+<text x="0.0127" y="2.032" size="1.27" layer="25" rot="SR0" align="bottom-center">&gt;NAME</text>
+<text x="0.0127" y="2.032" size="1.27" layer="26" rot="SMR0" align="bottom-center">&gt;NAME</text>
+<text x="-3.81" y="0.0381" size="1.778" layer="25" align="center">+</text>
+<text x="3.81" y="0.254" size="1.778" layer="25" align="center">–</text>
+<text x="-2.921" y="0.0381" size="1.778" layer="26" align="center">+</text>
+<text x="3.048" y="0.254" size="1.778" layer="26" align="center">–</text>
+<wire x1="-5.01141875" y1="3.978665625" x2="-5.01141875" y2="-3.021334375" width="0.127" layer="21"/>
+<wire x1="-5.01141875" y1="-3.021334375" x2="4.98858125" y2="-3.021334375" width="0.127" layer="21"/>
+<wire x1="4.98858125" y1="-3.021334375" x2="4.98858125" y2="3.978665625" width="0.127" layer="21"/>
+<wire x1="4.98858125" y1="3.978665625" x2="-5.01141875" y2="3.978665625" width="0.127" layer="21"/>
+</package>
+<package name="1X02CLEAN" library_version="23" library_locally_modified="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<pad name="1" x="-1.27" y="0" drill="1.016" rot="R90"/>
+<pad name="2" x="1.27" y="0" drill="1.016" rot="R90"/>
+<text x="-2.6162" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.524" y1="-0.254" x2="-1.016" y2="0.254" layer="51"/>
+<rectangle x1="1.016" y1="-0.254" x2="1.524" y2="0.254" layer="51"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="1X04" urn="urn:adsk.eagle:package:34277122/1" type="model" library_version="22">
@@ -17618,6 +17762,28 @@ Source: AVX .. aphvc.pdf</description>
 <description>PIN HEADER</description>
 <packageinstances>
 <packageinstance name="1X04/90"/>
+</packageinstances>
+</package3d>
+<package3d name="1X02" urn="urn:adsk.eagle:package:34684082/1" type="model" library_version="23" library_locally_modified="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<packageinstances>
+<packageinstance name="1X02"/>
+</packageinstances>
+</package3d>
+<package3d name="1X02/90" urn="urn:adsk.eagle:package:22437/2" type="model" library_version="22">
+<description>PIN HEADER</description>
+<packageinstances>
+<packageinstance name="1X02/90"/>
+</packageinstances>
+</package3d>
+<package3d name="SOLENOID-CONTACT" urn="urn:adsk.eagle:package:7941327/14" type="model" library_version="22">
+<packageinstances>
+<packageinstance name="SOLENOID-CONTACT"/>
+</packageinstances>
+</package3d>
+<package3d name="SOLENOID-CONTACT-REVERSE" urn="urn:adsk.eagle:package:7941328/14" type="model" library_version="22">
+<packageinstances>
+<packageinstance name="SOLENOID-CONTACT-REVERSE"/>
 </packageinstances>
 </package3d>
 </packages3d>
@@ -17633,6 +17799,16 @@ Source: AVX .. aphvc.pdf</description>
 <pin name="2" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="3" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="4" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
+</symbol>
+<symbol name="PINHD2" urn="urn:adsk.eagle:symbol:22308/1" library_version="22">
+<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.27" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="1.27" y1="5.08" x2="-6.35" y2="5.08" width="0.4064" layer="94"/>
+<wire x1="-6.35" y1="5.08" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
+<text x="-6.35" y="5.715" size="1.778" layer="95">&gt;NAME</text>
+<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" function="dot"/>
+<pin name="2" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -17666,6 +17842,71 @@ Source: AVX .. aphvc.pdf</description>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:22404/2"/>
 </package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PINHD-1X2" urn="urn:adsk.eagle:component:7941329/21" locally_modified="yes" prefix="JP" uservalue="yes" library_version="23" library_locally_modified="yes">
+<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PINHD2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="1X02">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:34684082/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="/90" package="1X02/90">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:22437/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOLENOID" package="SOLENOID-CONTACT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7941327/14"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="SOLENOID-R" package="SOLENOID-CONTACT-REVERSE">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:7941328/14"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="CLEAN" package="1X02CLEAN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -17949,6 +18190,8 @@ Siemens, Hewlett-Packard, Texas Instuments, Sharp, Motorola&lt;p&gt;
 <part name="CN3" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" deviceset="SJ1-2503A" device="" package3d_urn="urn:adsk.eagle:package:34317647/3" override_package3d_urn="urn:adsk.eagle:package:34319661/2" override_package_urn="urn:adsk.eagle:footprint:34317645/1" override_locally_modified="yes"/>
 <part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="050-024X044" package3d_urn="urn:adsk.eagle:package:23643/1" override_package3d_urn="urn:adsk.eagle:package:34322317/2" override_package_urn="urn:adsk.eagle:footprint:23147/1" value="1uF"/>
 <part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/7" package3d_urn="urn:adsk.eagle:package:23493/2" value="1k"/>
+<part name="Q1" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" deviceset="TIP120" device="" package3d_urn="urn:adsk.eagle:package:34683657/2" override_package3d_urn="urn:adsk.eagle:package:34684429/2" override_package_urn="urn:adsk.eagle:footprint:34683656/2"/>
+<part name="J5" library="pinhead-custom" library_urn="urn:adsk.eagle:library:7941324" deviceset="PINHD-1X2" device="CLEAN" override_package3d_urn="urn:adsk.eagle:package:34684443/2" override_package_urn="urn:adsk.eagle:footprint:34684444/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -17966,9 +18209,9 @@ higher input voltage means more heat dissipation)</text>
 <text x="162.56" y="22.86" size="1.778" layer="97" rot="R90">Limit 2</text>
 <text x="162.56" y="55.88" size="1.778" layer="97" rot="R90">Encoder</text>
 <wire x1="154.94" y1="78.74" x2="154.94" y2="2.54" width="0.1524" layer="97"/>
-<wire x1="154.94" y1="2.54" x2="251.46" y2="2.54" width="0.1524" layer="97"/>
-<wire x1="251.46" y1="2.54" x2="251.46" y2="78.74" width="0.1524" layer="97"/>
-<wire x1="251.46" y1="78.74" x2="154.94" y2="78.74" width="0.1524" layer="97"/>
+<wire x1="154.94" y1="2.54" x2="302.26" y2="2.54" width="0.1524" layer="97"/>
+<wire x1="302.26" y1="2.54" x2="302.26" y2="78.74" width="0.1524" layer="97"/>
+<wire x1="302.26" y1="78.74" x2="154.94" y2="78.74" width="0.1524" layer="97"/>
 <text x="160.02" y="71.12" size="3.81" layer="97">For potential future use</text>
 <text x="-152.4" y="170.18" size="3.81" layer="97">Main functionality</text>
 <wire x1="-160.02" y1="177.8" x2="149.86" y2="177.8" width="0.1524" layer="97"/>
@@ -18005,6 +18248,11 @@ depending on your camera</text>
 <wire x1="-20.32" y1="83.82" x2="-20.32" y2="87.376" width="0.1524" layer="97"/>
 <text x="30.48" y="88.9" size="1.778" layer="97">Only mount R2 and R3 
 if using a Lumix-camera</text>
+<text x="226.06" y="63.5" size="1.778" layer="97">For using the V_MOTOR voltage to power external LEDs 
+that can illuminate the object that's being photographed.
+TIP120 can source a lot of current (up to 9A), but needs a 
+heat-sink for anything more than 2W (current depends on your
+voltage. P = U*I).</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="2.54" y="35.56" smashed="yes" rot="R270">
@@ -18082,6 +18330,14 @@ if using a Lumix-camera</text>
 <instance part="R4" gate="G$1" x="-55.88" y="134.62" smashed="yes" rot="R180">
 <attribute name="NAME" x="-52.07" y="133.1214" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="-52.07" y="137.922" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="Q1" gate="1" x="259.08" y="33.02" smashed="yes">
+<attribute name="NAME" x="264.16" y="35.56" size="1.778" layer="95"/>
+<attribute name="VALUE" x="264.16" y="33.02" size="1.778" layer="96"/>
+</instance>
+<instance part="J5" gate="G$1" x="261.62" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="255.905" y="52.07" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="266.7" y="52.07" size="1.778" layer="96" rot="R90"/>
 </instance>
 </instances>
 <busses>
@@ -18192,6 +18448,11 @@ if using a Lumix-camera</text>
 <wire x1="-20.32" y1="12.7" x2="-33.02" y2="12.7" width="0.1524" layer="91"/>
 <junction x="-20.32" y="12.7"/>
 </segment>
+<segment>
+<pinref part="J5" gate="G$1" pin="1"/>
+<wire x1="259.08" y1="55.88" x2="259.08" y2="40.64" width="0.1524" layer="91"/>
+<label x="259.08" y="40.64" size="1.778" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="GND" class="1">
 <segment>
@@ -18254,6 +18515,11 @@ if using a Lumix-camera</text>
 <pinref part="C2" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="5.08" x2="-20.32" y2="0" width="0.1524" layer="91"/>
 <label x="-20.32" y="0" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="Q1" gate="1" pin="E"/>
+<wire x1="261.62" y1="27.94" x2="261.62" y2="20.32" width="0.1524" layer="91"/>
+<label x="261.62" y="25.4" size="1.778" layer="95" rot="R270"/>
 </segment>
 </net>
 <net name="A2" class="1">
@@ -18508,6 +18774,26 @@ if using a Lumix-camera</text>
 <wire x1="-15.24" y1="38.1" x2="-33.02" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
+<net name="LED_PWM" class="0">
+<segment>
+<pinref part="Q1" gate="1" pin="B"/>
+<wire x1="256.54" y1="33.02" x2="243.84" y2="33.02" width="0.1524" layer="91"/>
+<label x="243.84" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<label x="35.56" y="35.56" size="1.778" layer="95" align="bottom-right"/>
+<pinref part="U1" gate="G$1" pin="IO5"/>
+<wire x1="20.32" y1="35.56" x2="35.56" y2="35.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="LED_GND" class="0">
+<segment>
+<pinref part="Q1" gate="1" pin="C"/>
+<pinref part="J5" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="38.1" x2="261.62" y2="55.88" width="0.1524" layer="91"/>
+<label x="261.62" y="40.64" size="1.778" layer="95" rot="R90"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
@@ -18524,6 +18810,7 @@ if using a Lumix-camera</text>
 <approved hash="113,1,6.18236,86.36,SJ2,,,,,"/>
 <approved hash="113,1,18.9145,86.36,SJ3,,,,,"/>
 <approved hash="113,1,45.72,105.451,SJ1,,,,,"/>
+<approved hash="113,1,258.854,56.1171,J5,,,,,"/>
 </errors>
 </schematic>
 </drawing>
