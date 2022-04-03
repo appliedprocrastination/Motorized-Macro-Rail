@@ -1,15 +1,14 @@
 # Motorized Macro Rail Hardware
-## WARNING: The design is unverified at the time of writing 
 ## Summary
-PCB-design for controlling a motorized macro rail. Features:
-- Flexible solution for connecting to most types of camera with remote triggering ability via 2.5mm stereo jack, pin header, or solder joints.
-- Simple design for driving a single motor via a TMC2209 V1.2 motor driver.
-- Based on the WiFi-enabled NodeMCU 32S V2 DevKit. 
+PCB-design for controlling a motorized macro rail. Designed for photographers with electronics skills rather than engineers with photography skills. Main features:
 - Zero surface mount components, and should therefore be possible to hand solder - even for people with novice soldering skills. 
+- Flexible solution for connecting to most types of camera via 2.5mm stereo jack, pin header, or solder joints.
+- Simple design for driving a single motor via a BTT TMC2209 V1.2 motor driver.
+- Based on the WiFi-enabled NodeMCU 32S V2 DevKit. 
 - Has broken out headers for connecting limit switches and rotary encoders (neither of which are used in the intended application the board was designed for).
 - Total cost of around $30 (Camera, optics, motor, slider, and tools not included)
 
-![PerspectiveView](./Outputs/Images/MacroRail-3D-Perspective.png) 
+![PerspectiveView](./Outputs/Images/MacroRail-Option-A-3D-Perspective.png) 
 
 ## Configurability
 The design is quite adaptable in general, and there are few components that are completely necessary for functioning (see the section "Minimum viable design"). There is however one part of the circuit that is particularly adaptable, and requires the users attention to guarantee a working configuration: the shutter control circuit - which depends on what kind of camera you are planning to control with this setup.
@@ -42,7 +41,7 @@ Suppose your camera starts updating the screen each time the autofocus-signal is
 ### Default configuration (Canon,Nikon,Sony):
 The default configuration requires you to not mount R2 and R3. The pads on all the solder jumpers are shorted by default, meaning that a simplified schematic of the circuit looks like this:
 ![Default-config](./Outputs/Images/Documentation/Illustration-of-shutter-circuit-default.png)
-This should work for all Canon, Nikon, and Sony cameras.
+This should work for most Canon, Nikon, and Sony cameras.
 
 ### Lumix configuration:
 To use the shutter circuit with a Lumix camera, the resistor network must be mounted (R2 and R3). Keep in mind that SJ1 is shorted by default, meaning that it needs to be cut in order for R2 to take any effect.
@@ -53,6 +52,13 @@ Cutting this wire will activate R2 and leave you with the following schematic:
 
 ![Lumix-config-schematic](./Outputs/Images/Documentation/Illustration-of-shutter-circuit-Lumix.png)
 
+## Layout Options
+In the folder named Outputs/Gerber you will find design files that can be sent to a PCB manufacturer for production. There are two options, A and B, which differ only in the orientation of the power connector. The reason that there are two options is to accommodate for mounting the PCB on different tripod designs. Keep in mind that the PCB is mounted on a moving part of the macro rail, so protruding parts may get stuck or bent by the force from the motor.
+
+The design files are labelled Option A and Option B, and this illustration circles their differences.
+
+![Option A vs. Option B](./Outputs/Images/Documentation/Option-A-vs-B-2.png)
+
 ## Bill Of Materials (BOM)
 *Most of the AliExpress links are affiliate links. Prices are estimates and may vary with your location (shipping cost)*
 
@@ -62,16 +68,22 @@ Cutting this wire will activate R2 and leave you with the following schematic:
  - 1x [NodeMCU 32s V2](https://www.aliexpress.com/item/1005001636295529.html) Dev kit ([Documentation](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)) ca $5
  - 1x [PC817 Optocoupler](https://s.click.aliexpress.com/e/_AAgoAp) ca $1
  - 1x [100 uF capacitor (35V)](https://s.click.aliexpress.com/e/_ADnqKh) ca $1
+ - 1x [10 uF capacitor (25V)](https://s.click.aliexpress.com/e/_ADnqKh) ca $1
  - 1x [1 uF capacitor](https://s.click.aliexpress.com/e/_9j2jOz) ca $1
  - 1x [2.1 mm Barrel Jack (power)](https://s.click.aliexpress.com/e/_Aq01NT) ca $1
  - 1x [Selection of resistors](https://s.click.aliexpress.com/e/_AOqGqt) (depending on your camera) ca $1
-    - Note: R1 must always be mounted (which is a 600 Ohm resistor)
+    - Note: R1 and R4 must always be mounted (these are 600 Ohm and 1k Ohm resistors respectively)
  - 1x [SJ1-2503A 2.5 mm stereo jack receptacle (for shutter cable)](https://no.mouser.com/ProductDetail/CUI-Devices/SJ1-2503A?qs=WyjlAZoYn52728cbIH3aBA%3D%3D) ca $1 (optional)
  - 1x [4-pin screw terminal block](https://s.click.aliexpress.com/e/_97dipR) ca $2 (optional)
+ - 1x [TIP120 transistor (for powering external LED lighting)](https://s.click.aliexpress.com/e/_ApnAYv) ca $1 (optional) 
  - 3x [3-pin pin row](https://s.click.aliexpress.com/e/_ABvcat) ca $1 (optional)
  - 1x [4-pin pin row](https://s.click.aliexpress.com/e/_ABvcat) ca $1 (optional)
+ - 1x [2-pin pin row](https://s.click.aliexpress.com/e/_ABvcat) ca $1 (optional)
+ - 2x [19-pin pin header](https://s.click.aliexpress.com/e/_AFHrY5) ca $2 (optional)
+ - 2x [8-pin pin header](https://s.click.aliexpress.com/e/_AFHrY5) ca $1 (optional)
+ - 1x [2-pin pin header](https://s.click.aliexpress.com/e/_AFHrY5) ca $1 (optional)
 
- Total on PCB: ca $33
+ Total on PCB: ca $40 ($29 when excluding optional components)
 
 ### Outside of PCB:
 Mandatory parts:
@@ -94,9 +106,9 @@ Total outside of PCB: ca $109 ($59 when excluding parts that can be 3D-printed)
 ## Preview
 
 ### Top
-![TopView](./Outputs/Images/MacroRail-3D-Top.png) 
+![TopView](./Outputs/Images/MacroRail-Option-A-3D-Top.png) 
 ### Bottom
-![BottomView](./Outputs/Images/MacroRail-3D-Bottom.png)
+![BottomView](./Outputs/Images/MacroRail-Option-A-3D-Bottom.png)
 ### Minimum viable design
 Note: You may need to mount more resistors to get a minimum viable design (depending on your camera)
 ![MinimumViable](./Outputs/Images/Documentation/Minimalist-setup.png)

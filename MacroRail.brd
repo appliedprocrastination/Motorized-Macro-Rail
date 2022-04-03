@@ -157,7 +157,7 @@
 <layer number="255" name="routoute" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <board>
-<fusionsync huburn="a.cGVyc29uYWw6dWUyYjkwZjE2" projecturn="a.cGVyc29uYWw6dWUyYjkwZjE2IzIwMTgwOTA0MTQ2OTc5MDgx" f3durn="urn:adsk.wipprod:dm.lineage:p6BxFAy9R-OurxXYLrTLuw" pcbguid="dc448735-d099-4600-9fa7-d1462ebbee2b" lastpulledtime="" lastsyncedchangeguid="c9a359a8-8276-b33f-54dc-8abe83486807"/>
+<fusionsync huburn="a.cGVyc29uYWw6dWUyYjkwZjE2" projecturn="a.cGVyc29uYWw6dWUyYjkwZjE2IzIwMTgwOTA0MTQ2OTc5MDgx" f3durn="urn:adsk.wipprod:dm.lineage:p6BxFAy9R-OurxXYLrTLuw" pcbguid="dc448735-d099-4600-9fa7-d1462ebbee2b" lastpulledtime="" lastsyncedchangeguid="b1865a2a-e328-c488-8da2-12f6c6c320b7"/>
 <plain>
 <wire x1="0" y1="0" x2="50" y2="0" width="0" layer="20"/>
 <wire x1="50" y1="0" x2="50" y2="81" width="0" layer="20"/>
@@ -201,8 +201,8 @@
 <dimension x1="0" y1="81" x2="0" y2="0" x3="-3.81" y3="40.5" textsize="1.778" layer="48"/>
 <hole x="46.5" y="77.5" drill="3.2"/>
 <hole x="3.5" y="77.5" drill="3.2"/>
-<text x="36.765" y="4.41" size="0.889" layer="26" rot="SMR0" align="center-left">Vin (5-12V)</text>
-<text x="39.75" y="9.06" size="0.889" layer="26" rot="SMR0">GND</text>
+<text x="39.665" y="9.61" size="0.889" layer="26" rot="SMR0" align="center-left">Vin (5-12V)</text>
+<text x="39.665" y="3.46" size="0.889" layer="26" rot="SMR0" align="center-left">GND</text>
 <text x="21.59" y="77.47" size="0.889" layer="25">JLCJLCJLCJLC</text>
 <text x="6.155" y="39.305" size="1.27" layer="25" rot="R90" align="center">Lumix</text>
 <text x="3.135" y="39.305" size="1.27" layer="25" rot="R90" align="center">Lumix</text>
@@ -18259,9 +18259,9 @@ design rules under a new name.</description>
 <attribute name="NAME" x="2.8212" y="24.2712" size="1.016" layer="25" align="top-right"/>
 <attribute name="VALUE" x="5.285" y="24.47" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="CN1" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" package="DCJACK_2MM_PTH" package3d_urn="urn:adsk.eagle:package:34759908/1" override_package3d_urn="urn:adsk.eagle:package:34287631/2" override_package_urn="urn:adsk.eagle:footprint:6240083/1" override_locally_modified="yes" value="" x="53.25" y="4.46" smashed="yes" rot="R90">
-<attribute name="NAME" x="38.02" y="0.09" size="1.016" layer="25" rot="R90"/>
-<attribute name="VALUE" x="53.25" y="10.81" size="1.27" layer="27" rot="R180"/>
+<element name="CN1" library="00-Random-Components-Simen" library_urn="urn:adsk.eagle:library:24319138" package="DCJACK_2MM_PTH" package3d_urn="urn:adsk.eagle:package:34759908/1" override_package3d_urn="urn:adsk.eagle:package:34287631/2" override_package_urn="urn:adsk.eagle:footprint:6240083/1" override_locally_modified="yes" value="" x="42.66" y="-3.95" smashed="yes">
+<attribute name="NAME" x="37.82" y="8.09" size="1.016" layer="25" rot="R90"/>
+<attribute name="VALUE" x="49.01" y="-3.95" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="J3" library="adafruit" library_urn="urn:adsk.eagle:library:420" package="1X03-CLEANBIG" package3d_urn="urn:adsk.eagle:package:6240706/1" override_package3d_urn="urn:adsk.eagle:package:34287821/2" override_package_urn="urn:adsk.eagle:footprint:6240060/1" value="" x="48.26" y="57.4219" smashed="yes" rot="R90">
 <attribute name="NAME" x="48.9712" y="53.5357" size="1.27" layer="25" ratio="10" rot="R270" align="top-left"/>
