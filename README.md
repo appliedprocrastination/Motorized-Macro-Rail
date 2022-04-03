@@ -8,13 +8,15 @@ PCB-design for controlling a motorized macro rail. Designed for photographers wi
 - Has broken out headers for connecting limit switches and rotary encoders (neither of which are used in the intended application the board was designed for).
 - Total cost of around $30 (Camera, optics, motor, slider, and tools not included)
 
-![PerspectiveView](./Outputs/Images/MacroRail-Option-A-3D-Perspective.png) 
+<img src="./Outputs/Images/MacroRail-Option-A-3D-Perspective.png" width="800">
+<img src="./Outputs/Images/Photos/IMG_2487.JPG" width="800">
 
 ## Configurability
 The design is quite adaptable in general, and there are few components that are completely necessary for functioning (see the section "Minimum viable design"). There is however one part of the circuit that is particularly adaptable, and requires the users attention to guarantee a working configuration: the shutter control circuit - which depends on what kind of camera you are planning to control with this setup.
 
 Snippet of schematic (DNP = Do Not Place):
-![ShutterCircuitSchematic](./Outputs/Images/Documentation/Shutter-circuit.png)
+
+<img src="./Outputs/Images/Documentation/Shutter-circuit.png" width="800">
 
 As shown in the image above, there is a lot going on for what is normally a very simple circuit (you can trigger many cameras by simply short-circuiting all the pins in the remote shutter connector with a piece of wire). The reason for all this additional complexity is to keep the design as flexible as possible, and hopefully allow the PCB to be used with any type of camera. This is obviously not possible for me to test out in person, so I'm basing most of what follows on [this blog-post by Günter from LRTimelapse](https://lrtimelapse.com/news/intervalometer-hack/) (which is based on feedback from a solid photographer community) and private conversations with Stefan from [CNCKitchen](https://www.youtube.com/CNCKitchen) (as he owns a camera not mentioned in the above blog-post).
 
@@ -36,28 +38,33 @@ The solder jumpers (SJ1-3) are there to give the user an opportunity to make per
 
 ### An example of how to use solder jumpers:
 Suppose your camera starts updating the screen each time the autofocus-signal is activated (even in manual focus mode), so you want to stop that signal from being activated each time a picture is captured. In this scenario, you can use a scalpel to break the wire connecting the two pads of SJ2 by cutting along the red arrow in the following picture: 
-![How-to-cut-SJ2](./Outputs/Images/Documentation/cut_trace.png)
+
+<img src="./Outputs/Images/Documentation/cut_trace.png" width="800">
 
 ### Default configuration (Canon,Nikon,Sony):
 The default configuration requires you to not mount R2 and R3. The pads on all the solder jumpers are shorted by default, meaning that a simplified schematic of the circuit looks like this:
-![Default-config](./Outputs/Images/Documentation/Illustration-of-shutter-circuit-default.png)
+
+<img src="./Outputs/Images/Documentation/Illustration-of-shutter-circuit-default.png" width="800">
+
 This should work for most Canon, Nikon, and Sony cameras.
 
 ### Lumix configuration:
 To use the shutter circuit with a Lumix camera, the resistor network must be mounted (R2 and R3). Keep in mind that SJ1 is shorted by default, meaning that it needs to be cut in order for R2 to take any effect.
 
 Mount R2 and R3, then use a scalpel to break the wire in SJ1 by cutting along the red arrow in this picture.
-![Lumix-config-modification](./Outputs/Images/Documentation/Lumix_config.png)
+
+<img src="./Outputs/Images/Documentation/Lumix_config.png" width="800">
+
 Cutting this wire will activate R2 and leave you with the following schematic:
 
-![Lumix-config-schematic](./Outputs/Images/Documentation/Illustration-of-shutter-circuit-Lumix.png)
+<img src="./Outputs/Images/Documentation/Illustration-of-shutter-circuit-Lumix.png" width="800">
 
 ## Layout Options
 In the folder named Outputs/Gerber you will find design files that can be sent to a PCB manufacturer for production. There are two options, A and B, which differ only in the orientation of the power connector. The reason that there are two options is to accommodate for mounting the PCB on different tripod designs. Keep in mind that the PCB is mounted on a moving part of the macro rail, so protruding parts may get stuck or bent by the force from the motor.
 
 The design files are labelled Option A and Option B, and this illustration circles their differences.
 
-![Option A vs. Option B](./Outputs/Images/Documentation/Option-A-vs-B-2.png)
+<img src="./Outputs/Images/Documentation/Option-A-vs-B-2.png" width="800">
 
 ## Bill Of Materials (BOM)
 *Most of the AliExpress links are affiliate links. Prices are estimates and may vary with your location (shipping cost)*
@@ -106,12 +113,19 @@ Total outside of PCB: ca $109 ($59 when excluding parts that can be 3D-printed)
 ## Preview
 
 ### Top
-![TopView](./Outputs/Images/MacroRail-Option-A-3D-Top.png) 
+
+<img src="./Outputs/Images/MacroRail-Option-A-3D-Top.png" width="800">
+<img src="./Outputs/Images/Photos/IMG_2493.JPG" width="800">
+
 ### Bottom
-![BottomView](./Outputs/Images/MacroRail-Option-A-3D-Bottom.png)
+
+<img src="./Outputs/Images/MacroRail-Option-A-3D-Bottom.png" width="800">
+<img src="./Outputs/Images/Photos/IMG_2496.JPG" width="800">
+
 ### Minimum viable design
 Note: You may need to mount more resistors to get a minimum viable design (depending on your camera)
-![MinimumViable](./Outputs/Images/Documentation/Minimalist-setup.png)
+
+<img src="./Outputs/Images/Documentation/Minimalist-setup-Option-A.png" width="800">
 
 ### Various documentation:
 - [NodeMCU-32S Core Development Board](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)
