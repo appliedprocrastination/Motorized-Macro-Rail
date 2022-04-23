@@ -9,7 +9,7 @@ PCB-design for controlling a motorized macro rail. Designed for photographers wi
 - Total cost of around $30 (Camera, optics, motor, slider, and tools not included)
 
 <img src="./Outputs/Images/MacroRail-Option-A-3D-Perspective.png" width="800">
-<img src="./Outputs/Images/Photos/IMG_2487.JPG" width="800">
+<img src="./Outputs/Images/Photos/Overview-R.JPG" width="800">
 
 ## Configurability
 The design is quite adaptable in general, and there are few components that are completely necessary for functioning (see the section "Minimum viable design"). There is however one part of the circuit that is particularly adaptable, and requires the users attention to guarantee a working configuration: the shutter control circuit - which depends on what kind of camera you are planning to control with this setup.
@@ -59,12 +59,12 @@ Cutting this wire will activate R2 and leave you with the following schematic:
 
 <img src="./Outputs/Images/Documentation/Illustration-of-shutter-circuit-Lumix.png" width="800">
 
-## Layout Options
-In the folder named Outputs/Gerber you will find design files that can be sent to a PCB manufacturer for production. There are two options, A and B, which differ only in the orientation of the power connector. The reason that there are two options is to accommodate for mounting the PCB on different tripod designs. Keep in mind that the PCB is mounted on a moving part of the macro rail, so protruding parts may get stuck or bent by the force from the motor.
-
-The design files are labelled Option A and Option B, and this illustration circles their differences.
-
+## Layout Options 
+In the folder named Outputs/Gerber you will find design files that can be sent to a PCB manufacturer for production. There are two options, A and B, which differ only in the orientation of the power connector. 
 <img src="./Outputs/Images/Documentation/Option-A-vs-B-2.png" width="800">
+
+The reason that there are two options is to accommodate for mounting the PCB on different tripod designs. Keep in mind that the PCB is mounted on a moving part of the macro rail, so protruding parts may get stuck or bent by the force from the motor.
+<img src="./Outputs/Images/Documentation/Collision-Option-B.jpg" width="800">
 
 ## Bill Of Materials (BOM)
 *Most of the AliExpress links are affiliate links. Prices are estimates and may vary with your location (shipping cost)*
@@ -115,19 +115,40 @@ Total outside of PCB: ca $109 ($59 when excluding parts that can be 3D-printed)
 ### Top
 
 <img src="./Outputs/Images/MacroRail-Option-A-3D-Top.png" width="800">
-<img src="./Outputs/Images/Photos/IMG_2493.JPG" width="800">
+<img src="./Outputs/Images/Photos/Closeup-PCB.JPG" width="800">
 
 ### Bottom
 
 <img src="./Outputs/Images/MacroRail-Option-A-3D-Bottom.png" width="800">
-<img src="./Outputs/Images/Photos/IMG_2496.JPG" width="800">
+<img src="./Outputs/Images/Photos/Backside-Bodge.JPG" width="800">
 
 ### Minimum viable design
 Note: You may need to mount more resistors to get a minimum viable design (depending on your camera)
 
 <img src="./Outputs/Images/Documentation/Minimalist-setup-Option-A.png" width="800">
 
-### Various documentation:
+## How to order a printed circuit board (PCB)?
+If you are interested in this project, and feel comfortable soldering electronic components, but have never ordered a custom PCB before this section is for you. 
+
+Hobby-grade PCB manufacturers have made the process of ordering custom PCBs incredibly simple (and cheap) over the last few years, so for a low complexity board like this one, ordering can be done without any prior knowledge of the manufacturing process. 
+
+### Step by step guide:
+
+1. Decide whether you want your power connector oriented sideways (Option A) or downwards (Option B). Try to think about whether the power cable may get in the way of movement the tripod you plan to mount your macro rail to. See the section about [Layout Options](#layout-options) for more info.
+2. Download the .zip file corresponding to your preferred layout option from the folder [/Outputs/Gerber](/Outputs/Gerber/). This is the design file that you will send to the manufacturer for fabrication.
+3. Go to your preferred PCB manufacturers website and upload the gerber file. This board was designed for using https://www.jlcpcb.com, which is a very cheap, and fast, hobby-grade manufacturer. 
+<img src="./Outputs/Images/Documentation/JLCPCB-step1.png" width="800">
+4. Once the upload is complete, you will see a preview of the board, and the web-tool will have learned most of the important parameters of the design (like the size, how many layers of copper it contains, etc.)
+<img src="./Outputs/Images/Documentation/JLCPCB-step2.png" width="800">
+5. There's only one important thing you may need to fill in, which is the order of the layers. For some reason, the web-tool doesn't recognize the _l1, _l2, _l3, and _l4, suffixes of each layer, so you need to select these layers as shown in the image below. 
+<img src="./Outputs/Images/Documentation/JLCPCB-step3.png" width="800">
+While you are at it, make sure to select the sexy black soldermask, and click "specify a location" for the order number. The last setting will ensure that the manufacturer doesn't place an order number anywhere important, but rather replace a predefined string like shown here:
+<img src="./Outputs/Images/Documentation/JLCJLCJLCJLC.jpg" width="800">
+6. That's it! Click "Save to cart", pay, and the board will be manufactured and shipped towards you within a two or three days (typically). Note that there is a cheap shipping option kind of hidden in the menu. If you didn't already have all the other necessary components in your electronics stockpile, it might be a good idea to consider this "slow" shipping option since you are already waiting for other stuff. In my experience, the PCBs arrive between 2 and 3 weeks after placing your order (when using the cheapest shipping option).
+<img src="./Outputs/Images/Documentation/JLCPCB-step4.png" width="800">
+
+
+## Various documentation:
 - [NodeMCU-32S Core Development Board](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)
 - [NodeMCU Arduino Core (Software)](https://github.com/espressif/arduino-esp32)
 - [TMC2209-V1.2 manual (Motor driver module)](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/blob/master/manual/TMC2209-V1.2-manual.pdf)
