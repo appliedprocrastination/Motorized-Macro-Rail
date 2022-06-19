@@ -9,7 +9,7 @@ PCB-design for controlling a motorized macro rail. Designed for photographers wi
 - Total cost of around $30 (Camera, optics, motor, slider, and tools not included)
 
 ### Other parts of this project:
-- [Firmware and web-interface](https://github.com/SimenZhor/OpenMacroRail) (this may be moved in the future)
+- [Firmware and web-interface](https://github.com/AppliedProcrastination/OpenMacroRail)
 - [3D printable gears and PCB mount](https://www.printables.com/model/219042-motorized-camera-rail-for-macro-photography) 
 - [3D printable microscope objective adapter](https://www.printables.com/model/218910-microscope-objective-adapter) (RMS Thread 160mm focal distance)
 - [Canon EF/EF-S mount for the microscope adapter above](https://www.printables.com/model/218900-canon-efef-s-lens-mount-with-screw-holes)
