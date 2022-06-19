@@ -1,4 +1,4 @@
-# Motorized Macro Rail Hardware
+# OpenMacroRail Electronics Hardware
 ## Summary
 PCB-design for controlling a motorized macro rail. Designed for photographers with electronics skills rather than engineers with photography skills. Main features:
 - Zero surface mount components, and should therefore be possible to hand solder - even for people with novice soldering skills. 
@@ -79,7 +79,7 @@ The reason that there are two options is to accommodate for mounting the PCB on 
 ### On PCB:
  - [PCB itself](./Outputs/Gerber/MacroRail_V1_0-2022-02-26.zip). Ca $10 at JLCPCB
  - 1x [TMC2209-V1.2](https://s.click.aliexpress.com/e/_9uc1XB) Stepper motor driver ([Documentation](https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2/)). ca $8
- - 1x [NodeMCU 32s V2](https://www.aliexpress.com/item/1005001636295529.html) Dev kit ([Documentation](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)) ca $5
+ - 1x [NodeMCU 32s V2](https://www.aliexpress.com/item/1005001636295529.html) Dev kit (38-pin version) ([Documentation](https://docs.ai-thinker.com/en/esp32/boards/nodemcu_32s)) ca $5
  - 1x [PC817 Optocoupler](https://s.click.aliexpress.com/e/_AAgoAp) ca $1
  - 1x [100 uF capacitor (35V)](https://s.click.aliexpress.com/e/_ADnqKh) ca $1
  - 1x [10 uF capacitor (25V)](https://s.click.aliexpress.com/e/_ADnqKh) ca $1
